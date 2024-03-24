@@ -1,0 +1,6 @@
+@MobileStoreAPI_HostAddress = http://localhost:5277
+
+GET {{MobileStoreAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
