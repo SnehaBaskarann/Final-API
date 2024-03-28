@@ -8,11 +8,11 @@ namespace MobileStoreAPI.Models
         [Key]
         public int MobileId { get; set; }
 
-        [Required]
+       
         public string? MobileName { get; set; }
-        [Required]
+      
         public string? MobileModel { get; set;}
-        [Required]
+     
         public string? MobilePrice { get; set;}
 
         [NotMapped]

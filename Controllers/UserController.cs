@@ -57,43 +57,96 @@ namespace MobileStoreAPI.Controllers
 
 
             }
-            
+
 
         }
 
         [Route("api/Signin")]
         [HttpPost]
- 
-   public async Task<IActionResult> Signin(Login user)
-   {
-      try
-      {
-         User olduser = _context.users.Where(user1 => user1.EmailId == user.EmailId).FirstOrDefault()!;
- 
-         if (olduser.EmailId == user.EmailId && olduser != null)
-         {
-            if (olduser.Password == user.Password)
+
+        public async Task<IActionResult> Signin(Login user)
+        {
+            try
             {
-               return Ok("{\"emailstatus\":true,\"passwordstatus\":true}");
+                User olduser = _context.users.Where(user1 => user1.EmailId == user.EmailId).FirstOrDefault()!;
+
+                if (_context.users.Any(user1 => user1.EmailId == user.EmailId) || olduser.EmailId == user.EmailId && olduser != null)
+                {
+                    if (olduser.Password == user.Password)
+                    {
+                        return Ok("{\"emailstatus\":true,\"passwordstatus\":true}");
+                    }
+                    else
+                    {
+                        return Ok("{\"emailstatus\":true,\"passwordstatus\":false}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return Ok("{\"emailstatus\":false,\"passwordstatus\":false}");
+
+            }
+            return Ok("{\"emailstatus\":false,\"passwordstatus\":false}");
+
+
+        }
+
+
+
+
+
+        //[Route("api/Signin")]
+        //[HttpPost]
+
+        //public async Task<IActionResult> Signin(Login user)
+        //{
+        //    try
+        //    {
+        //        User olduser = _context.users.Where(user1 => user1.EmailId == user.EmailId).FirstOrDefault()!;
+
+        //        if (olduser != null&&olduser.EmailId == user.EmailId )
+        //        {
+        //            if (olduser.Password == user.Password)
+        //            {
+        //                return Ok("{\"emailstatus\":true,\"passwordstatus\":true}");
+        //            }
+        //            else
+        //            {
+        //                return Ok("{\"emailstatus\":true,\"passwordstatus\":false}");
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Ok("{\"emailstatus\":false,\"passwordstatus\":false}");
+
+        //    }
+        //    return Ok("{\"emailstatus\":false,\"passwordstatus\":false}");
+
+
+        //}
+
+
+
+
+        [Route("api/FindEmail")]
+        [HttpPost]
+        public ActionResult FindEmail([FromBody] EmailDto email)
+        {
+            var Email = _context.users.Where(s => s.EmailId == email.EmailId).FirstOrDefault();
+            if (Email == null)
+            {
+                return Ok("Not the data");
             }
             else
             {
-               return Ok("{\"emailstatus\":true,\"passwordstatus\":false}");
+                return Ok(Email);
             }
-         }
-      }
-      catch (Exception ex)
-      {
-         return Ok("{\"emailstatus\":false,\"passwordstatus\":false}");
- 
-      }
-      return Ok("{\"emailstatus\":false,\"passwordstatus\":false}");
- 
- 
-   }
-}
- 
+        }
     }
+}
+    
     
 
 

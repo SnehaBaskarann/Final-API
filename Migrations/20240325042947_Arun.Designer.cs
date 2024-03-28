@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MobileStoreAPI.Data;
 
@@ -10,9 +11,11 @@ using MobileStoreAPI.Data;
 namespace MobileStoreAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240325042947_Arun")]
+    partial class Arun
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,27 +41,6 @@ namespace MobileStoreAPI.Migrations
                     b.ToTable("admin");
                 });
 
-            modelBuilder.Entity("MobileStoreAPI.Models.Cart", b =>
-                {
-                    b.Property<int>("CartId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("MobileId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CartId");
-
-                    b.HasIndex("MobileId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Cart");
-                });
-
             modelBuilder.Entity("MobileStoreAPI.Models.Mobile", b =>
                 {
                     b.Property<int>("MobileId")
@@ -66,12 +48,15 @@ namespace MobileStoreAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("MobileModel")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("MobileName")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("MobilePrice")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int>("StockId")
@@ -98,9 +83,6 @@ namespace MobileStoreAPI.Migrations
 
                     b.Property<string>("OrderDate")
                         .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("OrderStatus")
                         .HasColumnType("longtext");
 
                     b.Property<int?>("usersUserId")
@@ -158,25 +140,6 @@ namespace MobileStoreAPI.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("users");
-                });
-
-            modelBuilder.Entity("MobileStoreAPI.Models.Cart", b =>
-                {
-                    b.HasOne("MobileStoreAPI.Models.Mobile", "mobile")
-                        .WithMany()
-                        .HasForeignKey("MobileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MobileStoreAPI.Models.User", "user")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("mobile");
-
-                    b.Navigation("user");
                 });
 
             modelBuilder.Entity("MobileStoreAPI.Models.Mobile", b =>

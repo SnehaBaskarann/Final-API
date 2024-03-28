@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MobileStoreAPI.Data;
 
@@ -10,9 +11,11 @@ using MobileStoreAPI.Data;
 namespace MobileStoreAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240325085303_Aneesh")]
+    partial class Aneesh
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -66,12 +69,15 @@ namespace MobileStoreAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("MobileModel")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("MobileName")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("MobilePrice")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int>("StockId")

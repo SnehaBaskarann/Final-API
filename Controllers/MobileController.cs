@@ -124,62 +124,135 @@ namespace MobileStoreAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateMobile(int id, [FromForm] Mobile updatedMobile)
-        {
-            var existingMobile = await _cartdetails.mobiles.FindAsync(id);
 
-            if (existingMobile == null)
+        public async Task<IActionResult> UpdateMobile(int id, [FromForm] MobileDTO mobile)
+        {
+            // Retrieve the existing mobile from the database
+            var mobileToUpdate = await _cartdetails.mobiles.FindAsync(id);
+            if (mobileToUpdate == null)
             {
-                return NotFound(); // Mobile not found
+                return NotFound();
             }
 
-            // Update the properties of the existing mobile with the new values
-            existingMobile.MobileName = updatedMobile.MobileName;
-            existingMobile.MobileModel = updatedMobile.MobileModel;
-            existingMobile.MobilePrice = updatedMobile.MobilePrice;
-
-            // If a new image is uploaded, update the image
-            if (updatedMobile.MobileImage != null)
+            // Check if a new image is provided
+            if (mobile.MobileImage != null)
             {
-                var uniqueFileName = $"{Guid.NewGuid()}_{updatedMobile.MobileImage.FileName}";
-                var uploadsFolder = Path.Combine(_environment.WebRootPath, "images");
+                // Generate a unique file name for the new image
+                var uniqueFileName = $"{Guid.NewGuid()}_{mobile.MobileImage.FileName}";
+
+                // Save the new image to the designated folder
+                var uploadsFolder = Path.Combine(_environment.WebRootPath, "Images");
                 var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    await updatedMobile.MobileImage.CopyToAsync(stream);
+                    await mobile.MobileImage.CopyToAsync(stream);
                 }
 
-                // Remove the old image file
-                var oldImagePath = Path.Combine(_environment.WebRootPath, "images", existingMobile.UniqueFileName);
-                if (System.IO.File.Exists(oldImagePath))
+                // Delete the old image if necessary
+                var oldFilePath = Path.Combine(uploadsFolder, mobileToUpdate.UniqueFileName);
+                if (System.IO.File.Exists(oldFilePath))
                 {
-                    System.IO.File.Delete(oldImagePath);
+                    System.IO.File.Delete(oldFilePath);
                 }
 
-                // Update the unique file name and save it to the database
-                existingMobile.UniqueFileName = uniqueFileName;
+                // Update the file path in the database
+                mobileToUpdate.UniqueFileName = uniqueFileName;
             }
 
-            // Save changes to the database
-            _cartdetails.mobiles.Update(existingMobile);
-            await _cartdetails.SaveChangesAsync();
+            // Update individual properties if provided
+            if (!string.IsNullOrEmpty(mobile.MobileName))
+            {
+                mobileToUpdate.MobileName = mobile.MobileName;
+            }
 
-            return Ok(existingMobile);
+            if (!string.IsNullOrEmpty(mobile.MobileModel))
+            {
+                mobileToUpdate.MobileModel = mobile.MobileModel;
+            }
+
+            if (!string.IsNullOrEmpty(mobile.MobilePrice))
+            {
+                mobileToUpdate.MobilePrice = mobile.MobilePrice;
+            }
+           
+
+          
+
+
+
+
+            // Save the changes to the database
+            _cartdetails.SaveChanges();
+
+            
+            return Ok(mobileToUpdate);
         }
+
+
+
+
+
+
+        //public async Task<IActionResult> UpdateMobile(int id, [FromForm] Mobile updatedMobile)
+        //{
+        //    var existingMobile = await _cartdetails.mobiles.FindAsync(id);
+
+        //    if (existingMobile == null)
+        //    {
+        //        return NotFound(); // Mobile not found
+        //    }
+
+        //    // Update the properties of the existing mobile with the new values
+        //    existingMobile.MobileName = updatedMobile.MobileName;
+        //    existingMobile.MobileModel = updatedMobile.MobileModel;
+        //    existingMobile.MobilePrice = updatedMobile.MobilePrice;
+
+        //    // If a new image is uploaded, update the image
+        //    if (updatedMobile.MobileImage != null)
+        //    {
+        //        var uniqueFileName = $"{Guid.NewGuid()}_{updatedMobile.MobileImage.FileName}";
+        //        var uploadsFolder = Path.Combine(_environment.WebRootPath, "images");
+        //        var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+        //        using (var stream = new FileStream(filePath, FileMode.Create))
+        //        {
+        //            await updatedMobile.MobileImage.CopyToAsync(stream);
+        //        }
+
+        //        // Remove the old image file
+        //        var oldImagePath = Path.Combine(_environment.WebRootPath, "images", existingMobile.UniqueFileName);
+        //        if (System.IO.File.Exists(oldImagePath))
+        //        {
+        //            System.IO.File.Delete(oldImagePath);
+        //        }
+
+        //        // Update the unique file name and save it to the database
+        //        existingMobile.UniqueFileName = uniqueFileName;
+        //    }
+
+        //    // Save changes to the database
+        //    _cartdetails.mobiles.Update(existingMobile);
+        //    await _cartdetails.SaveChangesAsync();
+
+        //    return Ok(existingMobile);
+        //}
+
+
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletemobileDetails(int id)
         {
             var mobdetails = _cartdetails.mobiles.Find(id);
             if (mobdetails == null)
             {
-                return NotFound(); // PetAccessory not found
+                return NotFound(); 
             }
  
             _cartdetails.mobiles.Remove(mobdetails);
             await _cartdetails.SaveChangesAsync();
  
-            return NoContent(); // Successfully deleted
+            return NoContent();
         }
 
 

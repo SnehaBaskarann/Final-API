@@ -10,7 +10,8 @@ namespace MobileStoreAPI.Data
         public DbSet<Order> orders { get; set; }
         public DbSet<Mobile> mobiles { get; set; }
         public DbSet<Stock> stocks { get; set; }
-        public DbSet<Admin> admin { get; set; }    
+        public DbSet<Admin> admin { get; set; }
+        public DbSet<Cart> Cart { get; set; }
 
     }
 }

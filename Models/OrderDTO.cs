@@ -9,7 +9,11 @@ namespace MobileStoreAPI.Models
         public int OrderId { get; set; }
         [Required]
         public string OrderDate { get; set; }
+
+        public string? OrderStatus { get; set; }
         public int UserId { get; set; }
+
+        public int MobileId { get; set; }
 
 
     }
