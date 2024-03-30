@@ -1,0 +1,84 @@
+﻿D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Controllers\CartController.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Controllers\MobileController.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Controllers\OrderController.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Controllers\UserController.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Controllers\WeatherForecastController.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Data\AppDbContext.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\20240322065310_Initial.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\20240322065310_Initial.Designer.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\20240323051010_added'.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\20240323051010_added'.Designer.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\20240325042947_Arun.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\20240325042947_Arun.Designer.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\20240325085303_Aneesh.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\20240325085303_Aneesh.Designer.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\20240326054427_First.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\20240326054427_First.Designer.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Migrations\AppDbContextModelSnapshot.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\Admin.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\Adminview.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\Cart.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\CartDto.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\EmailDto.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\Login.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\Mobile.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\MobileDTO.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\Order.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\OrderDTO.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\Stock.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\UpdateOrderStatus.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Models\User.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Program.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\WeatherForecast.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\obj\Debug\net8.0\MobileStoreAPI.GlobalUsings.g.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\obj\Debug\net8.0\MobileStoreAPI.AssemblyInfo.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\obj\Debug\net8.0\MobileStoreAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\00723f64-c92f-437d-8f41-410fe2d56dcd_oppo.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\00b65f40-c4ff-4e05-89fb-4954bccb304c_Vivo.png
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\04293fac-d429-4248-8d5a-df3f8d4d46f0_Moto.png
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\05953b86-b036-4a8b-a806-023fcf3d6388_iqoo.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\1a3e84f8-b967-4dcf-b5b3-9a0edbe4d054_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\1a755b80-e7ae-4ab7-9858-6d6d62c3fc2f_iqoo.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\26b86285-aeb3-4c87-83b1-51ab39d2c3b0_realme 11pro.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\28ba398d-5b4b-4903-a058-070378f76607_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\33f286f6-a160-4920-8b56-502e9ae04722_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\40e6661f-6024-47af-81c3-a1f396d1906e_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\48a3808b-bcb0-418b-a264-5d49c69d483d_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\51ae53a0-955b-40bd-984b-6a2840479577_samsung s23.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\592cb59d-0f26-4628-bb34-1a1466c1fc35_samsung s23.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\59b4544e-ac69-442b-8109-4cd514cc9430_Samsung.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\63ef60f7-a900-4930-9338-600cf792e07e_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\64263dc0-33a8-4225-b30b-bbcde755b22e_xiaomi.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\66033c86-2be8-4644-b3b6-7069148f55b9_realme 11pro.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\6be3b4ff-8287-41a8-939c-760c4b6b10c4_realme 11pro.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\6eef75d7-85e7-4cac-88b1-0ce88fe52e4e_mi 12.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\73012484-1677-4817-b9a5-9df02cfa4f6e_one plus.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\7b166598-1d56-4c5e-909c-0ac5446718f0_Apple.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\7c7191ef-c12a-44ee-b00a-f7437aa96f26_xiaomi.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\84eed2f3-ba6d-4a92-902f-8c144d6d3c5c_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\8d6d4e3f-9636-437f-a414-facfd91473e1_Poco.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\9def5891-9820-4871-9e13-fc3336ef1d4e_Apple.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\a041add4-c4fd-4069-b776-c356ff3215fc_iqoo.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\a0534c6f-db98-496e-8068-01cf72da8dc9_iqoo.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\a080a268-aadd-4e98-b1b4-6ce710c06736_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\a84bb5fd-7ac7-4d89-b808-5279b5481e5d_Vivo.png
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\a96b69a2-75cc-4df8-b383-c6c8c1bae2ae_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\adb4bdf5-50b8-41ec-99bf-248f0ab76674_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\ae382c50-776d-4d4c-aae2-8a4d46bda6f7_Samsung.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\b2b39d0f-c9e6-44d1-a2fc-41587776ae83_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\c49fa28b-72d7-4953-9f8d-86ba31302acc_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\c9555b4f-ae6c-42fb-a299-a41df6202d74_onePlus.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\ec6259c0-fab2-4442-90fd-ec1783c9f1d1_realme 11pro.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\f0008ab5-11a4-4152-b889-36a401159b6e_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\f02f2dbb-9284-420e-a398-9649eaad692c_Moto.png
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\f21aa098-1151-44f4-bf37-14f9b7b0fb77_Apple.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\f34870b8-ca98-4c30-9871-241479a3dd7c_samsung s23.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\faa30114-241a-433b-bd30-91cb0966efa0_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\fac98ce3-f176-40a1-a1c6-78f4159766f2_oneplus12r.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\fedfdb40-4720-4f37-ae33-613f9a486abb_1+.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\wwwroot\images\ff5d69f8-42b8-4202-b557-6e705855f9b7_realme-12-pro-5g.jpg
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\appsettings.Development.json
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\appsettings.json
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\MobileStoreAPI.http
+D:\MicroProject-Final\Backend\MobileStoreAPI\MobileStoreAPI\Properties\launchSettings.json
